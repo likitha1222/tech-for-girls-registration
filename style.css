@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -98,4 +98,11 @@ button:hover {
   button {
     font-size: 14px;
   }
+}
+/* Add this at the end of your style.css */
+
+button:hover {
+  transform: scale(1.02);
+  background-color: #2e7d32;
+  transition: all 0.3s ease;
 }
