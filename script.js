@@ -8,13 +8,13 @@ const thankYouMessage = document.getElementById("thankYouMessage");
 
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwkznqyNxctndOr6WFUDIWm0Q9o3QJsTCFdHrCTLq2CTd8xPJ_fPpM_0CJe-CVoSPOuAQ/exec";
 
-// Check for already submitted
+
 if (localStorage.getItem("submitted") === "true") {
   disableForm();
   thankYouMessage.style.display = "block";
 }
 
-// WhatsApp click tracking
+
 whatsappBtn.addEventListener("click", () => {
   if (clickCount < 5) {
     clickCount++;
@@ -30,7 +30,7 @@ whatsappBtn.addEventListener("click", () => {
   }
 });
 
-// Form submission
+
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -93,7 +93,7 @@ form.addEventListener("submit", async function (e) {
   reader.readAsDataURL(file);
 });
 
-// Disable form
+
 function disableForm() {
   const inputs = form.querySelectorAll("input, button, select");
   inputs.forEach((el) => el.disabled = true);
